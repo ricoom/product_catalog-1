@@ -1,0 +1,9 @@
+
+<app-search-bar (searchProduct)="filterResults($event)" ></app-search-bar>
+
+<div class="card_container">
+ <div *ngFor="let prod of filteredProducts" >
+ <app-product [product]="prod" ></app-product>
+</div>
+</div>
+
