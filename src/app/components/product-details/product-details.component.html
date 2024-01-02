@@ -1,1 +1,22 @@
-<p>product-details works!</p>
+<div class="details_card">
+    <div class="pic_card">
+        <div class="prod_img">
+            <img [src]="curProduct.images[curImage]" alt="" srcset="">
+        </div>
+        <div class="more_pics">
+            <div class="pic">
+                <img [src]="curProduct.images[1]" alt="" srcset="" (click)="display(1)">
+            </div>
+            <div class="pic">
+                <img [src]="curProduct.images[2]" alt="" srcset="" (click)="display(2)">
+            </div>
+            <div class="pic">
+                <img [src]="curProduct.images[3]" alt="" srcset="" (click)="display(3)">
+            </div>
+        </div>
+    </div>
+    
+    <div class="product_info">
+        <p>{{curProduct.description}}</p>
+    </div>
+</div>

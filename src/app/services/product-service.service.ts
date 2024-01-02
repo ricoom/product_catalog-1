@@ -16,5 +16,8 @@ export class ProductServiceService {
   public getProducts() : Observable<Product[]> {
     return this.http.get<any>(url).pipe(map((Object)=>Object.products))
   }
+  public findOne(id:any): Observable<Product>{
+return this.http.get<any>(`${url}/${id}`)
+  }
   
 }

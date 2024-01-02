@@ -1,11 +1,22 @@
 
     <div class="card">
         <div class="prod-img">
-            <img [src]="product.images[0]" alt="" srcset="">
+            <img [src]="product.images[0]" alt="" srcset="" [routerLink]="['/product_details', product.id, 'details']">
         </div>
         <div class="info">
             <p>{{product.title}}</p>
             <h3>{{product.price  | currency:'$ '}}</h3>
+            <div class="rating_box" *ngIf="product.rating>4.5" >
+                <div class="rating">⭐</div>
+                <div class="rating">⭐</div>
+                <div class="rating">⭐</div>
+                <div class="rating">⭐</div>
+            </div>
+            <div class="rating_box" *ngIf="product.rating<4.5" >
+                <div class="rating">⭐</div>
+                <div class="rating">⭐</div>
+                <div class="rating">⭐</div>
+            </div>
         </div>
     </div>
 
