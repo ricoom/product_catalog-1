@@ -1,0 +1,5 @@
+<div class="form-group" *ngFor="let category of categories">
+    <input type="radio" name="category" id="phone" [value]="category" (change)="selectCategory(category)">
+    <label for="phone">{{category}}</label>
+</div>
+<a [routerLink]="['/products']"  >all</a>

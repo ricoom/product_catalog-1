@@ -1,9 +1,18 @@
-
-<app-search-bar (searchProduct)="filterResults($event)" ></app-search-bar>
+<div class="input_pane">
+        <app-search-bar (searchProduct)="filterResults($event)" ></app-search-bar>
+</div>
 
 <div class="card_container">
- <div *ngFor="let prod of filteredProducts" >
- <app-product [product]="prod" ></app-product>
-</div>
+        <div class="left_pane">
+                <app-category (categoryEvent)="chosenCategory($event)"></app-category>
+
+        </div>
+
+        <div class="all_products">
+                <div *ngFor="let prod of filteredProducts" >
+                        <app-product [product]="prod" ></app-product>
+                       </div>
+        </div>
+ 
 </div>
 

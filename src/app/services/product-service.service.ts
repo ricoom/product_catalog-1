@@ -12,12 +12,17 @@ export class ProductServiceService {
 
   constructor(private http:HttpClient) { }
 
-  
   public getProducts() : Observable<Product[]> {
     return this.http.get<any>(url).pipe(map((Object)=>Object.products))
   }
   public findOne(id:any): Observable<Product>{
 return this.http.get<any>(`${url}/${id}`)
   }
-  
+  public getCategories():Observable<any>{
+    return this.http.get<any>(`${url}/categories`)
+
+  }
+  public getByCategory(category:any){
+    return this.http.get<any>(`${url}/category/${category}`).pipe(map((Object)=>Object.products))
+  }
 }
