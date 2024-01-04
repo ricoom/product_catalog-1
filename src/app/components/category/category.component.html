@@ -1,5 +1,16 @@
-<div class="form-group" *ngFor="let category of categories">
-    <input type="radio" name="category" id="phone" [value]="category" (change)="selectCategory(category)">
-    <label for="phone">{{category}}</label>
+
+<div class="btns">
+    <button type="button" (click)="openSide()"  *ngIf="open"><i class="fa-solid fa-bars"></i></button>
+    <button type="button"  (click)="closeSide()" *ngIf="close"><i class="fa-solid fa-close"></i></button>
 </div>
-<a [routerLink]="['/products']">all</a>
+<div class="cover" *ngIf="close">
+    
+     
+
+    <div class="form-group" *ngFor="let category of categories">
+        <input type="radio" name="category" id="phone" [value]="category" (change)="selectCategory(category)">
+        <label for="phone">{{category}}</label>
+    </div>
+    <a [routerLink]="['/products']">all</a>
+    
+</div>

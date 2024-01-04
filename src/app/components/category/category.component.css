@@ -1,3 +1,17 @@
 .form-group input{
    margin-right: 10px;
 }
+
+.cover{
+   background-color: rgb(219, 215, 215);
+   padding: 7px;
+   line-height: 1.5em;
+   transition: transform 2s ease-in-out;
+   
+ }
+
+
+@media only screen and (max-width: 378px) {
+   
+   
+}

@@ -2,14 +2,14 @@
     display: flex;
     justify-content: space-around;
     gap: 10px;
-    max-width: 80%;
+    max-width: 85%;
     margin-top: 17px;
 
 }
 .all_products{
-    flex-basis: 80%;
+    flex-basis: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: stretch;
     gap: 20px;
     flex-wrap: wrap;
 }
