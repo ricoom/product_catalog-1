@@ -16,4 +16,10 @@ nav{
  nav ul li a{
     color:rgb(3, 31, 70);
     text-decoration: none;
+    font-size: .9em;
  }
+ nav ul li a :first-child{
+   color: rgb(219, 145, 7);
+   font-size: 1.5em;
+ }
+ 
