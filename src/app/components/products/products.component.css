@@ -16,3 +16,13 @@
 app-category{
    /* color: blue; */
 }
+@media only screen and (max-width: 378px) {
+    .card_container{
+        display: flex;
+        justify-content: space-around;
+        gap: 10px;
+        max-width: 100%;
+        margin-top: 17px;
+    
+    }
+}
